@@ -1,6 +1,9 @@
-## debounce和throttle的区别
+# debounce和throttle的区别
 
-#### debounce(去抖动)
+
+-----------------------
+
+## debounce(去抖动)
 
 debounce就是设定一个时间，如果在这个时间内，事件一直触发，那指定的cbk就不执行，直到在这个时间内事件不再触发才去执行。
 
@@ -9,7 +12,7 @@ debounce就是设定一个时间，如果在这个时间内，事件一直触发
 输入框，如果用户一直在输入，我们就不执行某任务，直到用户在500毫秒内不再输入，我们才去执行
 
 
------------------------
+
 
 > 代码简单实现
 
@@ -29,7 +32,10 @@ debounce就是设定一个时间，如果在这个时间内，事件一直触发
 
 ```
 
-#### throttle(节流)
+
+------------------------
+
+## throttle(节流)
 
 throttle就是控制流量，在一点时间内，不管时间触发几次，指定的cbk就执行一次。
 
@@ -37,7 +43,7 @@ throttle就是控制流量，在一点时间内，不管时间触发几次，指
 
 拖动窗口，因为鼠标的移动，窗口也要跟着移动，如果不做任何处理，那cbk会执行很多次，这大大影响性能。所以我们控制一下，在20毫秒内，不管鼠标怎么移动，都只执行一次。
 
-------------------------
+
 
 > 代码简单实现
 
@@ -50,10 +56,10 @@ throttle就是控制流量，在一点时间内，不管时间触发几次，指
 ```javascript
 
     function throttle(cbk,time){
-        let runTime = +new Data();
+        let runTime = +new Date();
         let nowTime = '';
         return function(...args){
-            nowTime = +new Data();
+            nowTime = +new Date();
             if(nowTime - runTime >= time){
                 cbk.apply(this,args);
                 runTime = nowTime;
@@ -102,10 +108,10 @@ throttle就是控制流量，在一点时间内，不管时间触发几次，指
         return function(...args){
             if(run){
                 cbk.apply(this,args);
-                runTime = +new Data();
+                runTime = +new Date();
                 run = false;
             }
-            nowTime = +new Data();
+            nowTime = +new Date();
             if(nowTime - runTime > time){
                 run = true;
             }
