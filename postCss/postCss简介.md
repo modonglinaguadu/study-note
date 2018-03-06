@@ -15,3 +15,8 @@ postCss现在在国内还未完全流行起来，现在大家用得比较多的�
 ## 总结
 
 postCss就是一个平台，它有很多插件，每个插件都是一个js模块，你只需要把自己项目需要的模块加载进来即可，就像gulp一样，这使得它轻盈开放。
+
+
+## 参考文献
+
+[PostCSS Deep Dive: What You Need to Know](https://webdesign.tutsplus.com/tutorials/postcss-deep-dive-what-you-need-to-know--cms-24535)
