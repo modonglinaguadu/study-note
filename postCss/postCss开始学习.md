@@ -9,23 +9,23 @@
 1. 首先登陆codepen网站，注册登陆账号。
 2. 创建一个newpen
 
-![image][/image/postCss/newpen.png]
+![image](../image/postCss/newpen.png)
 
 3. 创建完成后，你会看到三个面板，点击css面板左上角的设置
 
-![image][/image/postCss/clickset.png]
+![image](../image/postCss/clickset.png)
 
 4. 在设置中选择postCss
 
-![image][/image/postCss/setpostcss.png]
+![image](../image/postCss/setpostcss.png)
 
 5. 添加你要的postCss插件
 
-![image][/image/postCss/addplugn.png]
+![image](../image/postCss/addplugn.png)
 
 6. 看到这就是成功了，现在可以开始学习postCss插件了
 
-![image][/image/postCss/success.png]
+![image](../image/postCss/success.png)
 
 ## 参考文献
 
