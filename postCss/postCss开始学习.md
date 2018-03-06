@@ -1,8 +1,8 @@
 # postCss开始学习
 
-开始学习之前，我们得有一个书写的工具，当然您可以结合postCss和gulp，或webpack，或grunt搭建一个编译环境。这里我们就不做介绍，您可以在官网找到教程。
+开始学习之前，我们得有一个编译的工具，当然您可以结合postCss和gulp，或webpack，或grunt搭建一个编译环境。这里我们就不做介绍，您可以在官网找到教程。
 
-在Kezz Bracey大神的postCss入门指南教程中，推荐了两个工具，我选择一个作为我的入门教程工具。
+在Kezz Bracey大神的postCss入门指南教程中，推荐了两个在线编辑工具，我选择一个作为我们的学习练习工具。
 
 ## [CodePen](https://codepen.io/)
 
