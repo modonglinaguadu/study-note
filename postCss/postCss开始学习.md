@@ -27,6 +27,11 @@
 
 ![image](../image/postCss/success.png)
 
+
+## 建议
+
+从后面的文章开始，我们将一一介绍各个插件的功能和api。你们可以边看边在codePen上练习，这样效果会更佳。好了，我们下一篇会先从cssnext开始。
+
 ## 参考文献
 
 [PostCSS Quickstart Guide: Instant Setup Options](https://webdesign.tutsplus.com/tutorials/postcss-quickstart-guide-instant-setup-options--cms-24536)
