@@ -10,6 +10,9 @@
 * * [let&const&块级作用域](/es6/let&const&块级作用域.md)
 * * [函数](/es6/函数.md)
 * * [解构赋值](/es6/解构赋值.md)
+* * [扩展运算符](/es6/扩展运算符.md)
+* * [Symbol](/es6/Symbol.md)
+* * [Set&Map](/es6/Set&Map.md)
 
 * js工具库
 * * [debounce&throttle](/js工具库/debounce&throttle.md)
