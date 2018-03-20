@@ -2,10 +2,10 @@
 
 # 目录
 
-* [let&const&块级作用域](/let&const&块级作用域.md)
-* [函数](/函数.md)
-* [解构赋值](/解构赋值.md)
-* [扩展运算符](/扩展运算符.md)
-* [Symbol](/Symbol.md)
-* [Set&Map](/Set&Map.md)
-* [iterator&generator](/iterator&generator.md)
+* [let&const&块级作用域](/es6/let&const&块级作用域.md)
+* [函数](/es6/函数.md)
+* [解构赋值](/es6/解构赋值.md)
+* [扩展运算符](/es6/扩展运算符.md)
+* [Symbol](/es6/Symbol.md)
+* [Set&Map](/es6/Set&Map.md)
+* [iterator&generator](/es6/iterator&generator.md)
