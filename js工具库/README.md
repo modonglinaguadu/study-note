@@ -2,7 +2,7 @@
 
 #目录
 
-* [debounce&throttle](/debounce&throttle.md)
+* [debounce&throttle](/js工具库/debounce&throttle.md)
 
 
 

@@ -2,10 +2,10 @@ postCss是一个新的技术，所以最近学习入门一下，故做笔记加�
 
 # 目录
 
-* [postCss简介](/postCss简介.md)
-* [postCss开始学习](/postCss开始学习.md)
-* [postCss-cssnext](/postCss-cssnext.md)
-* [postCss-cssnext-1](/postCss-cssnext-1.md)
+* [postCss简介](/postCss/postCss简介.md)
+* [postCss开始学习](/postCss/postCss开始学习.md)
+* [postCss-cssnext](/postCss/postCss-cssnext.md)
+* [postCss-cssnext-1](/postCss/postCss-cssnext-1.md)
 
 
 

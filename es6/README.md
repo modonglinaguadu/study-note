@@ -9,3 +9,14 @@
 * [Symbol](/es6/Symbol.md)
 * [Set&Map](/es6/Set&Map.md)
 * [iterator&generator](/es6/iterator&generator.md)
+* [async](/es6/async.md)
+* [class](/es6/class.md)
+* [module](/es6/module.md)
+
+
+
+# 未经允许，请勿转载
+
+**author:** aguadu
+
+**email:** modonglinagua@163.com
