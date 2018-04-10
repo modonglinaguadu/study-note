@@ -9,7 +9,15 @@
 * [es6](/es6/README.md)
 * [js工具库](/js工具库/README.md)
 * [postCss](/postCss/README.md)
+* [node](/node/README.md)
+* [原生js](/原生js/README.md)
 
+
+## [其他](/其他/README.md)
+
+和代码无关的，最近开始一直整理笔记，突然想到，以前看了很多书，好像久了记忆都会模糊，要不以后把看的书写个小总结吧，用几句话总结一些自己喜欢的观点
+
+* [其他](/其他/README.md)
 
 
 # 未经允许，请勿转载
