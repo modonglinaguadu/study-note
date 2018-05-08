@@ -98,7 +98,7 @@ generator像一个分段执行的函数，通过指针来控制其执行位置�
     g.next(1)
     /*
     g.next(1)相当于
-    const x = 1
+    const x = 2*1
     */
 ```
 
