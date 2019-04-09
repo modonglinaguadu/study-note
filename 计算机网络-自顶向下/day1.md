@@ -47,7 +47,7 @@ Digital Subscriber Line
 
 > 无源光网络 PON (Passive Optical Network)
 
-![PON](https://github.com/modonglinaguadu/study-note/image/network/PON.png)
+![PON](https://github.com/modonglinaguadu/study-note/blob/master/image/network/PON.png)
 
 用户 1--光纤--1 ONT\(光网络设备\)\[一种用户端的光网络终端\] n--光纤--1 光纤分配器  1--光纤--1 \< 中心局 OLT\(光纤线路终端\)\[提供光信号和电信号之间的转换\] \> ---- 因特网
 
