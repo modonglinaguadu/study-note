@@ -77,4 +77,33 @@ HTTP使用TCP作为支撑运输协议
 
 HTTP不保存客户的任何信息，所以我们说HTTP是**无状态协议**
 
-HTTP同时支持**持续连接**和**非持续连接**,默认持续连接。持续连接就是公用一个TCP连接，非持续连接是每个HTTP连接都重新创建一个TCP连接
+HTTP同时支持**持续连接**和**非持续连接**,默认持续连接。持续连接就是公用一个TCP连接，非持续连接是每个HTTP连接都重新创建一个TCP连接，两个方式各有优劣，非持续连接每次HTTP请求都需要TCP三次握手，一次请求需要两次往返时间RTT(即从客户端发送请求到服务端响应，然后客户端接收响应的时间)
+
+![图片](https://github.com/modonglinaguadu/study-note/blob/master/image/network/RTT.png)
+
+持续连接中，一条连接如果间隔一段时间仍未使用(可以设置间隔时间)，HTTP服务器会关闭连接
+
+#### HTTP报文格式
+
+> 请求报文格式
+
+![图片](https://github.com/modonglinaguadu/study-note/blob/master/image/network/http_request.png)
+
+这个是典型的HTTP请求报文
+
+第一行是**请求行**，后面的行是**请求头**(首部行)
+
+> 请求行
+
+请求行包含了方法字段，URL字段和HTTP版本字段
+
+> 请求头(首部行)
+
+* Host 指定主机
+* Connection keep-alive告诉服务器保持持续连接，close是非持续连接
+* Refere 来源网址，即从哪个网址来到这个网页
+
+
+下图是HTTP请求报文结构，除了请求行和请求头，还有一个请求体
+![图片](https://github.com/modonglinaguadu/study-note/blob/master/image/network/http_request_post.png)
+![图片](https://github.com/modonglinaguadu/study-note/blob/master/image/network/http_request1.png)
