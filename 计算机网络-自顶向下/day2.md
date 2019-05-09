@@ -93,17 +93,50 @@ HTTP同时支持**持续连接**和**非持续连接**,默认持续连接。持�
 
 第一行是**请求行**，后面的行是**请求头**(首部行)
 
-> 请求行
+**请求行**
 
 请求行包含了方法字段，URL字段和HTTP版本字段
 
-> 请求头(首部行)
+**请求头(首部行)**
 
 * Host 指定主机
 * Connection keep-alive告诉服务器保持持续连接，close是非持续连接
 * Refere 来源网址，即从哪个网址来到这个网页
 
 
-下图是HTTP请求报文结构，除了请求行和请求头，还有一个请求体
+下图是HTTP请求报文结构，除了请求行和请求头，还有一个请求体,get请求时，请求体为空
 ![图片](https://github.com/modonglinaguadu/study-note/blob/master/image/network/http_request_post.png)
 ![图片](https://github.com/modonglinaguadu/study-note/blob/master/image/network/http_request1.png)
+
+> 响应报文格式
+
+![图片](https://github.com/modonglinaguadu/study-note/blob/master/image/network/http_response1.png)
+
+响应报文也是包含三个部分，**状态行**，**请求头**，**请求体**
+
+![图片](https://github.com/modonglinaguadu/study-note/blob/master/image/network/http_response.png)
+
+> cookie
+
+cookie技术有4个组件
+
+1. 响应报文中请求头中一个cookie行
+2. 请求报文中请求头中一个cookie行
+3. 用户系统中保存一份cookie文件，并且由浏览器管理
+4. 位于web站点的一个后端数据库
+
+#### web缓存
+
+web缓存器也叫代理服务器
+
+![图片](https://github.com/modonglinaguadu/study-note/blob/master/image/network/http_proxy.png)
+
+> 工作流程
+
+web缓存服务器即是客户也是服务器，当客户端向代理服务器发出http请求，代理服务器会查看是否有请求的资源缓存，如果有即直接响应返回缓存的资源，如果没有，向源服务器发起http请求，请求客户端需要的资源，等拿到资源后，把资源存储在代理服务器，并把资源返回客户端。
+
+> 使用代理服务器原因
+
+1. 大大减少客户请求响应时间，特别是当客户端到代理服务器之间瓶颈带宽大于客户端到源服务器之间的瓶颈带宽时
+2. web缓存器可以大大减少一个机构(比如校园网络，校园网络中可以添加一组代理服务器，然后设置校园网的客户端指向代理服务器)的接入链路到因特网的通信量，通过减少通信量，机构就不用急于增加带宽，减少费用
+3. web缓存能降低因特网上的web流量，从而改善所有应用性能
