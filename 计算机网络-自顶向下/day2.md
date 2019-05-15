@@ -140,3 +140,63 @@ web缓存服务器即是客户也是服务器，当客户端向代理服务器�
 1. 大大减少客户请求响应时间，特别是当客户端到代理服务器之间瓶颈带宽大于客户端到源服务器之间的瓶颈带宽时
 2. web缓存器可以大大减少一个机构(比如校园网络，校园网络中可以添加一组代理服务器，然后设置校园网的客户端指向代理服务器)的接入链路到因特网的通信量，通过减少通信量，机构就不用急于增加带宽，减少费用
 3. web缓存能降低因特网上的web流量，从而改善所有应用性能
+
+> CDN(内容分发网络)
+
+CDN公司在因特网上安装了许多地理上分散的缓存服务器，因而使大量流量本地化
+
+> 缓存版本问题
+
+缓存服务器虽然提供了很多方便，但是也产生一个新的问题，那就是缓存的版本是旧版本
+
+> 条件GET请求
+
+当HTTP请求包含if-xxx这个的首部时，服务器会对附带的条件进行判断，只有判断条件为真，才会执行请求，这样的请求首部有5个
+
+* If-Modified-Since
+* If-Unmodified-Since
+* If-Match
+* If-None-Match
+* If-Range
+
+这里解决缓存版本问题，我们使用了If-Modified-Since来解决
+
+1. 缓存服务器在向web服务器请求资源时，web服务器会在响应报文中添加**Last-Modified**首部，该首部值是该资源修改的时间
+2. 下一次，缓存服务器再向web服务器发送资源请求时，会在请求报文中添加**If-Modified-Since**首部，该首部值是上次web服务器响应报文中**Last-Modified**的值
+3. web服务器会根据请求报文中**If-Modified-Since**的值判断资源是否更新，如果没有更新，就返回304状态，就是未更新，如果更新了，就返回新的资源，并在响应报文中添加新的**Last-Modified**首部
+
+本地浏览器也有缓存功能和上面缓存服务器的工作原理是一样的
+
+资源有新版本的响应报文：
+``` 
+HTTP/1.1 200 OK
+Date: Tue, 08 Sep 2015 06:43:02 GMT
+Content-Type: application/javascript
+Content-Length: 94020
+Connection: keep-alive
+Vary: Accept-Encoding
+Cache-Control: public,max-age=25920000
+Last-Modified: Fri, 15 Feb 2013 03:06:57 GMT
+Accept-Ranges: bytes
+ETag: "7468b58329bce1:0"
+```
+
+资源没有更新的响应报文
+``` 
+HTTP/1.1 304 Not Modified
+Date: Tue, 08 Sep 2015 06:38:40 GMT
+Connection: keep-alive
+Cache-Control: public,max-age=25920000
+Accept-Ranges: bytes
+ETag: "7468b58329bce1:0"
+```
+
+
+#### FTP
+
+FTP和HTTP一样，都是文件传输协议，都使用了TCP协议，然而两个协议之间有很多不同，最大的不同是FTP使用了两个并行的TCP连接来传输文件，一个是**控制连接**，一个是**数据连接**
+
+* 控制连接用于两个主机之间的传输控制信息，比如用户标识，口令，改变远程目录的命令，存放和获取文件等命令
+* 数据连接用于实际传输文件
+
+![图片](https://github.com/modonglinaguadu/study-note/blob/master/image/network/ftp.png)
